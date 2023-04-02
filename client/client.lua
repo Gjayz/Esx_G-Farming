@@ -272,7 +272,7 @@ end
  AddEventHandler('esx-farming:client:FooodProcess', function(src)
      lib.registerContext({
          id = 'proccess_food',
-         title = 'Tomato Process',
+         title = 'Food Process',
          options = {
              {
                  icon = "fa-solid fa-clipboard",
@@ -349,7 +349,7 @@ RegisterNetEvent('esx-farming:client:MangoProces')
 AddEventHandler('esx-farming:client:MangoProces', function(src)
      lib.registerContext({
          id = 'proccess_mango',
-         title = 'Tomato Process',
+         title = 'Mango Process',
          options = {
              {
                 icon = "fa-solid fa-cubes-stacked",
@@ -385,7 +385,7 @@ RegisterNetEvent('esx-farming:client:OrangeProces')
 AddEventHandler('esx-farming:client:OrangeProces', function(src)
      lib.registerContext({
          id = 'proccess_orange',
-         title = 'Tomato Process',
+         title = 'Orange Process',
          options = {
              {
                 icon = "fa-solid fa-cubes-stacked",
@@ -421,7 +421,7 @@ RegisterNetEvent('esx-farming:client:AppleProces')
 AddEventHandler('esx-farming:client:AppleProces', function(src)
      lib.registerContext({
          id = 'proccess_apple',
-         title = 'Tomato Process',
+         title = 'Apple Process',
          options = {
              {
                 icon = "fa-solid fa-cubes-stacked",
