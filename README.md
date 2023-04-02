@@ -255,4 +255,4 @@
     end)
     
     
-## Put Image (/qb-inventory/html/images)
+## Put Image (/ox iventory/web/images)
