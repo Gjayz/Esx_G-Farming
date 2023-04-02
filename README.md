@@ -11,7 +11,7 @@
 - [PolyZone](https://github.com/mkafrin/PolyZone)
 
 ## Preview's
-- [ShowCase Video](https://streamable.com/if6rv8)
+- [ShowCase Video](https://streamable.com/yupzb3)
 
 ## ox inventory/data/item.lua
 
