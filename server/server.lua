@@ -288,21 +288,19 @@ AddEventHandler("esx-farming:server:TomatoSellRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.Tomato)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 10
             Player.removeInventoryItem(Config.Tomato, itemData.count)
         else
-            price = amountResources * 10
-  
             break
         end
     end
     Player.addMoney(price)
     TriggerClientEvent('esx-farming:client:notify', src, 'Tomato Sold', 'Tomato', 'center-right', 'success')
 end)
+
 -- Tomato Rewards
 RegisterNetEvent("esx-farming:server:TomatoRewards")
 AddEventHandler("esx-farming:server:TomatoRewards", function(src)
@@ -344,14 +342,12 @@ AddEventHandler("esx-farming:server:SellTomatoKetchupRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.TomatoKetchup)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 75
             Player.removeInventoryItem(Config.TomatoKetchup, itemData.count)
         else
-            price = amountResources * 75
             break
         end
     end
@@ -364,14 +360,12 @@ AddEventHandler("esx-farming:server:SellTomatoPatseRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.TomatoPaste)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 150
             Player.removeInventoryItem(Config.TomatoPaste, itemData.count)
         else
-            price = amountResources * 150
             break
         end
     end
@@ -396,14 +390,12 @@ AddEventHandler("esx-farming:server:MangoSellRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.Mango)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 25
             Player.removeInventoryItem(Config.Mango, itemData.count)
         else
-            price = amountResources * 25
             break
         end
     end
@@ -444,14 +436,12 @@ AddEventHandler("esx-farming:server:SellMangoJuiceRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.MangoJuice)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.JuicePrice
             Player.removeInventoryItem(Config.MangoJuice, itemData.count)
         else
-            price = amountResources * Config.JuicePrice
             break
         end
     end
@@ -464,14 +454,12 @@ AddEventHandler("esx-farming:server:SellMangoWineRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.MangoWine)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.WinePrice
             Player.removeInventoryItem(Config.MangoWine, itemData.count)
         else
-            price = amountResources * Config.WinePrice
             break
         end
     end
@@ -497,14 +485,12 @@ AddEventHandler("esx-farming:server:OrangeSellRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.Orange)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 25
             Player.removeInventoryItem(Config.Orange, itemData.count)
         else
-            price = amountResources * 25
             break
         end
     end
@@ -545,14 +531,12 @@ AddEventHandler("esx-farming:server:SellOrangeJuiceRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.OrangeJuice)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.JuicePrice
             Player.removeInventoryItem(Config.OrangeJuice, itemData.count)
         else
-            price = amountResources * Config.JuicePrice
             break
         end
     end
@@ -565,14 +549,12 @@ AddEventHandler("esx-farming:server:SellOrangeWineRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.OrangeWine)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.WinePrice
             Player.removeInventoryItem(Config.OrangeWine, itemData.count)
         else
-            price = amountResources * Config.WinePrice
             break
         end
     end
@@ -597,14 +579,12 @@ AddEventHandler("esx-farming:server:AppleSellRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.Apple)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 25
             Player.removeInventoryItem(Config.Apple, itemData.count)
         else
-            price = amountResources * 25
             break
         end
     end
@@ -645,14 +625,12 @@ AddEventHandler("esx-farming:server:SellAppleJuiceRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.AppleJuice)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.JuicePrice
             Player.removeInventoryItem(Config.AppleJuice, itemData.count)
         else
-            price = amountResources * Config.JuicePrice
             break
         end
     end
@@ -665,14 +643,12 @@ AddEventHandler("esx-farming:server:SellAppleWineRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.AppleWine)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.WinePrice
             Player.removeInventoryItem(Config.AppleWine, itemData.count)
         else
-            price = amountResources * Config.WinePrice
             break
         end
     end
@@ -697,14 +673,12 @@ AddEventHandler("esx-farming:server:GauvaSellRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.Gauva)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * 25
             Player.removeInventoryItem(Config.Gauva, itemData.count)
         else
-            price = amountResources * 25
             break
         end
     end
@@ -747,14 +721,12 @@ AddEventHandler("esx-farming:server:SellGauvaJuiceRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.GauvaJuice)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.JuicePrice
             Player.removeInventoryItem(Config.GauvaJuice, itemData.count)
         else
-            price = amountResources * Config.JuicePrice
             break
         end
     end
@@ -767,14 +739,13 @@ AddEventHandler("esx-farming:server:SellGauvaWineRewards", function(src)
     local src = source
     local Player = ESX.GetPlayerFromId(src)
     local price = 0
-    local amountResources = 0
     while true do
         local itemData = Player.getInventoryItem(Config.GauvaWine)
         if itemData and itemData.count >= 1 then
-            amountResources = amountResources + 1
+            price = itemData.count * Config.WinePrice
             Player.removeInventoryItem(Config.GauvaWine, itemData.count)
         else
-            price = amountResources * Config.WinePrice
+
             break
         end
     end
@@ -791,4 +762,4 @@ AddEventHandler('onResourceStart', function(resourceName)
     print("       ^Github ^5 --> ^https://github.com/Gjayz         "," ^Author Gjayz")
     print("       ^Main Github ^5 --> ^https://github.com/gjayz099         ","ESX-Legacy Farming Job")
     print("---------------------------------------------------------------------------------------------")
-  end)
+end)
