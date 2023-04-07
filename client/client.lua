@@ -61,7 +61,7 @@ end)
 
 
 
---selerStone, Carfting and jewelry Ped
+--- Ped
 Citizen.CreateThread(function()
     for k, v in pairs(Config.PedLocation) do
     local modelHash = GetHashKey(v.model)
